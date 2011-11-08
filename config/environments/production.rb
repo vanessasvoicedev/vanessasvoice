@@ -45,6 +45,7 @@ Vanessa::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
   config.assets.precompile += %w( mercury.css )
+    config.assets.precompile += %w( mercury_overrides.css )
   config.assets.precompile += %w( mercury.js )
   config.assets.precompile += %w( mercury_loader.js )
 
