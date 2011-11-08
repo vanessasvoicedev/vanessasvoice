@@ -1,4 +1,6 @@
 Vanessa::Application.routes.draw do
+  get "pages/show"
+  get "pages/*id", to: "pages#show", as: "page"
   get "home/index"
 
   # The priority is based upon order of creation:
