@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   
   def mercury_update
     page=Page.find(params[:id])
+    authorize! :manage, page
     page.name=params[:content][:page_name][:value]
     page.content=params[:content][:page_content][:value]
     page.save!
