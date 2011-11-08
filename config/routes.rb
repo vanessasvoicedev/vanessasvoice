@@ -1,8 +1,12 @@
 Vanessa::Application.routes.draw do
-  get "pages/show"
-  get "pages/*id", to: "pages#show", as: "page"
-  get "home/index"
+  Mercury::Engine.routes
 
+  #get "pages/show"
+  #get "pages/*id", to: "pages#show", as: "page"
+  get "home/index"
+  resources :pages do
+    member {post :mercury_update}
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
