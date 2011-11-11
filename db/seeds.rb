@@ -5,32 +5,27 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-page=Page.new
+page=Page.find_or_initialize_by_slug("about")
 page.name="About"
-page.slug="About"
 page.content="This is the about page."
 page.save!
 
-page=Page.new
+page=Page.find_or_initialize_by_slug("contact")
 page.name="Contact"
-page.slug="contact"
 page.content="This is the contact page."
 page.save!
 
-page=Page.new
+page=Page.find_or_initialize_by_slug("news")
 page.name="News"
-page.slug="news"
 page.content="This is the news page."
 page.save!
 
-page=Page.new
+page=Page.find_or_initialize_by_slug("events")
 page.name="Events"
-page.slug="events"
 page.content="This is the events page."
 page.save!
 
-user=User.new
-user.email="test@user.com"
+user=User.find_or_initialize_by_email("test@user.com")
 user.password="123456"
 user.password_confirmation="123456"
 user.admin=true
